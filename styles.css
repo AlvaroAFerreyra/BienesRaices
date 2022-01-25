@@ -39,6 +39,12 @@ img{
 
 
 /*HEADER*/
+
+.site_header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
 .site_header.inicio{
     background-image: url(../bienes_raices/img/header.jpg);
     background-position: center center;
@@ -137,6 +143,8 @@ img{
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    max-width: 50rem;
+    flex: 1;
 }
 
 .iconos_caracteristicas li{
@@ -163,19 +171,26 @@ img{
     text-align: center;
 }
 
+.contenido_centrado{
+    max-width: 80rem;
+}
+
 /*ANUNCIOS*/
 
 .contenedor_anuncios{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .anuncio{
+    flex-shrink: 0;
     flex-basis: calc(33.3% - 1rem);
     border-style: solid;
     border-color: #B5B5B5;
     border-width: 1px;
     background-color: #F5F5F5;
+    margin-bottom: 2rem;
 }
 
 .contenido_anuncio{
@@ -314,4 +329,35 @@ img{
 .copyright{
     margin: 0;
     color: #ffffff;
+}
+
+/*PÁGINA INTERNAS*/
+
+/*NOSOTROS*/
+
+.contenido_nosotros{
+    display: flex;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+}
+
+.texto_nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+/*ANUNCIO*/
+
+.resumen_propiedad{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*CONTACTO*/
+
+label{
+    display: block;
 }
