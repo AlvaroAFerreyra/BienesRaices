@@ -27,6 +27,7 @@ h4{
 }
 
 .contenedor{
+    width: 95%;
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -58,6 +59,13 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .contenido_header{
+        text-align: left;
+    }
 }
 
 .contenido_header h1{
@@ -68,10 +76,15 @@ img{
 }
 
 .barra{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 3rem;
+}
+
+@media (min-width: 768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
@@ -80,12 +93,19 @@ img{
 .navegacion a{
     color: white;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    display: block;
 }
 
-.navegacion a:last-of-type{
-    margin: 0;
+@media (min-width: 768px){
+    .navegacion a{
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type{
+        margin: 0;
+    }
 }
 
 .navegacion a:hover{
@@ -109,6 +129,15 @@ img{
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
 }
 
 .boton_amarillo{
@@ -120,6 +149,12 @@ img{
     background-color: #71b100;
 }
 
+.boton_contacto{
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .ver_todas{
     display: flex;
     justify-content: flex-end;
@@ -127,14 +162,22 @@ img{
 
 
 /*ICONOS NOSOTROS*/
-.iconos_nosotros{
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width: 768px){
+    .iconos_nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .icono{
-    flex-basis: calc(33.3% - 1rem);
     text-align: center;
+}
+
+@media (min-width: 768px){
+    .icono{
+        flex-basis: calc(33.3% - 1rem);
+    }
 }
 
 .icono h3{
@@ -182,20 +225,24 @@ img{
 
 /*ANUNCIOS*/
 
-.contenedor_anuncios{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (min-width: 768px){
+    .contenedor_anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .anuncio{
-    flex-shrink: 0;
-    flex-basis: calc(33.3% - 1rem);
-    border-style: solid;
-    border-color: #B5B5B5;
-    border-width: 1px;
+    border: 1px solid #b5b5b5;
     background-color: #F5F5F5;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){
+    .anuncio{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
 }
 
 .contenido_anuncio{
@@ -224,7 +271,7 @@ img{
 }
 
 .contenido_contacto{
-    flex: 1;
+    flex: 0 0 95%;
     color: #ffffff;
 
 }
@@ -235,17 +282,19 @@ img{
 
 /*SECCION INFERIOR*/
 
-.seccion_inferior{
-    display: flex;
-    justify-content: space-between;
-}
+@media (min-width: 768px){
+    .seccion_inferior{
+        display: flex;
+        justify-content: space-between;
+    }
 
-.seccion_inferior .blog{
-    flex-basis: 60%;
-}
+    .seccion_inferior .blog{
+        flex-basis: 60%;
+    }
 
-.seccion_inferior .testimoniales{
-    flex-basis: calc(40% - 2rem);
+    .seccion_inferior .testimoniales{
+        flex-basis: calc(40% - 2rem);
+    }
 }
 
 .entrada_blog{
@@ -327,8 +376,13 @@ img{
 
 .contenedor_footer{
     padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .contenedor_footer{
+        display: flex;
+        justify-content: space-between;
 }
 
 .copyright{
